@@ -33,7 +33,6 @@ async function updateTask(id, taskData) {
     const updatedTask = await Task.query().patchAndFetchById(id, taskDataToUpdate);
     return updatedTask;
   } catch (error) {
-    console.log("reror:",error);
     throw new Error('Failed to update task');
   }
 }
