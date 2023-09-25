@@ -8,11 +8,11 @@ Before running this project, make sure you have the following installed:
 ### Installation
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/your-project.git
+   git clone https://github.com/romilshah18/task-manager.git
    ```
 2. Navigate to the project directory:
    ```
-   cd your-project
+   cd task-manager
    ```
 3. Install the dependencies:
    ```
