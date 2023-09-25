@@ -34,8 +34,24 @@ Before running this project, make sure you have the following installed:
 
 ### Database Setup
 1. Create a new MySQL database with the name specified in the `.env` file.
-2. Run the database migrations to create the necessary tables:
+2. Run the below database migrations to create the necessary tables:
+```
+CREATE TABLE `tasks` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `status` enum('open','inprogress','completed') NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+ALTER TABLE `tasks`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `tasks`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+COMMIT;
+```
 
 ### Running the Project
 To start the project in dev mode, run the following command:
