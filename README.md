@@ -159,6 +159,15 @@ Response body:
 ]
 ```
 
+### Assmuptions/Features/Improvements in the current code:
+```
+-> The database used is MySQL and have used Objection as ORM. I have also add raw queries as a part of the comment above each query to show the raw query as well.
+-> I have added a JOI validations for each and every requests. Similarly authentication check can also be added over there after implementing proper authentication framework.
+-> I have created a Model, Controller, Service structure to manage the whole request flow.
+-> Logger is not added in the current project, but can be added to catch and resolve errors.
+-> All the configurable parameters are kept in .env which might changes as per the environment.The NODE_ENV is not currently used in the code as it was not required, but in production scenario need to be used.
+```
+
 
 
 
